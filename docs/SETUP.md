@@ -65,6 +65,7 @@ OAUTH_TOKEN_URL=https://login.microsoftonline.com/{{TENANT_ID}}/oauth2/v2.0/toke
 OAUTH_REDIRECT_URL=https://{{DOMAIN}}/oauth2/response
 OAUTH_SIGN_OUT_URL=https://login.microsoftonline.com/{{TENANT_ID}}/oauth2/logout?client_id={{CLIENT_ID}}
 OAUTH_SESSION_SIGN=F1Li3rvehgcrF8DMHJ7OyxO4w9Y3D
+OAUTH_SCOPES=openid,offline_access,email
 ```
 
 The `OAUTH_SESSION_SIGN` should be updated to a any secure string.
