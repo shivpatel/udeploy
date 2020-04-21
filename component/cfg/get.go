@@ -21,6 +21,7 @@ const (
 	oauthAuthURL      = "OAUTH_AUTH_URL"
 	oauthTokenURL     = "OAUTH_TOKEN_URL"
 	oauthSessSign     = "OAUTH_SESSION_SIGN"
+	oauthScopes       = "OAUTH_SCOPES"
 
 	sqsChangeQueue = "SQS_CHANGE_QUEUE"
 	sqsAlarmQueue  = "SQS_ALARM_QUEUE"
@@ -143,4 +144,7 @@ func init() {
 		Get[preCache] = "false"
 	}
 
+	// optional environment variables
+	v, _ = os.LookupEnv(oauthScopes)
+	Get[oauthScopes] = v
 }
